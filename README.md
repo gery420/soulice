@@ -1,3 +1,3 @@
-#Soulice
+Soulice
 
 Mental Health Care Companion
