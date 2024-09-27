@@ -6,9 +6,9 @@ const LeftSignup = () => {
       {/* heading */}
       <div className="flex-col space-y-0 text-center">
         <div className="font-black text-6xl font-head-primary text-dark-100">
-          FitHub
+          Soulice
         </div>
-        <div className="text-lg">Must for HealthCare</div>
+        <div className="text-lg">Must for Mental HealthCare</div>
       </div>
 
       {/* Center Tagline */}
@@ -19,8 +19,8 @@ const LeftSignup = () => {
         </div>
         <div className=" text-lg lg:text-base font-thin leading-6">
           <i>
-            Discover the health portal full of of doctors and trainers who are
-            waiting to help you on making your health journey easier.
+            Discover the health portal full of of doctors and counselors who are
+            waiting to help you on making your mental health journey easier.
           </i>
         </div>
       </div>
@@ -29,7 +29,7 @@ const LeftSignup = () => {
       <div className="font-bold text-lg lg:text-xl text-dark-100 leading-6">
         <i>
           Being healthy has countless benefits. So what is stopping you? Just
-          connect with us and take a step towards improving your health...
+          connect with us and take a step towards improving your mental health...
         </i>
       </div>
     </div>

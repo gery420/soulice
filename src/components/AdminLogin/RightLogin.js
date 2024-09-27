@@ -68,9 +68,9 @@ const Login = () => {
       {/* logo */}
       <div className="flex-col space-y-0 text-center ">
         <div className="font-black text-5xl text-primary-blue font-head-primary">
-          FitHub
+          Soulice
         </div>
-        <div className="text-xs text-white">Must for HealthCare</div>
+        <div className="text-xs text-white">Must for Mental HealthCare</div>
       </div>
       {/* form */}
       <div className="lg:py-8 lg:px-6 lg:rounded-lg rounded shadow">

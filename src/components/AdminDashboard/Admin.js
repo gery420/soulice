@@ -77,10 +77,10 @@ const Admin = () => {
                 )}
 
                 <h5 className="text-2xl font-medium mb-4 text-center text-gray-700">
-                  Physiotherapists
+                Psychiatrists 
                 </h5>
                 <p className="text-gray-500 text-center text-lg">
-                  Number of Physiotherapists registered onto our portal!
+                  Number of Psychiatrists registered onto our portal!
                 </p>
               </div>
             </div>
@@ -106,10 +106,10 @@ const Admin = () => {
                 )}
 
                 <h5 className="text-2xl font-medium text-center mb-4 text-gray-700">
-                  Nutritionists
+                  Mental Health Professionals
                 </h5>
                 <p className="text-gray-500 text-center text-lg">
-                  Number of Nutritionists registered onto our portal!
+                  Number of Mental Health Professionals registered onto our portal!
                 </p>
               </div>
             </div>
@@ -135,10 +135,10 @@ const Admin = () => {
                 )}
 
                 <h5 className="text-2xl font-medium mb-4 text-center text-gray-700">
-                  Gym Trainers
+                  Pyschologists
                 </h5>
                 <p className="text-gray-500 text-center text-lg">
-                  Number of Gym Trainers registered onto our portal!
+                  Number of Pyschologists registered onto our portal!
                 </p>
               </div>
             </div>

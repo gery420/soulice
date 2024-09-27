@@ -4,7 +4,7 @@ const TacHeading = () => {
   return (
     <div className="flex flex-col text-center space-y-0">
       <div className="font-semibold text-5xl text-dark-900 ">
-        <span className="text-primary-blue">FitHub Terms and Conditions</span>
+        <span className="text-primary-blue">Soulice Terms and Conditions</span>
       </div>
 
       <div className="text-dark-700 text-lg">

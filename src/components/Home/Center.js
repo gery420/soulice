@@ -35,18 +35,18 @@ const Part1 = ({ profile }) => {
         <div className="text-white text-2xl">
           {profile.type === "Patient" ? (
             <i>
-              We, at FitHub are here to help you in your journey! And, we are
+              We, at Soulice are here to help you in your journey! And, we are
               thrilled to see you take the very first step! But, before you take
               the next step of exploring what we have at your disposal here at
-              FitHub, do have a thorough look of our terms and conditions by
+              Soulice, do have a thorough look of our terms and conditions by
               clicking on the button below!
             </i>
           ) : (
             <i>
-              We, at FitHub are glad that you have taken an important step of
+              We, at Soulice are glad that you have taken an important step of
               being one among the flagbearers of ensuring the well-being of
               people. Being a verified expert on our portal, we hope that you
-              make a difference by guiding our users towards a better health!
+              make a difference by guiding our users towards a better mental health!
               Before you start with your journey, do have a thorough look of our
               terms and conditions by clicking on the button below!
             </i>

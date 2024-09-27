@@ -123,9 +123,9 @@ const Signup = () => {
       {/* logo */}
       <div className="flex-col space-y-0 text-center ">
         <div className="font-black text-5xl text-primary-blue font-head-primary">
-          FitHub
+          Soulice
         </div>
-        <div className="text-xs text-white">Must for HealthCare</div>
+        <div className="text-xs text-white">Must for Mental HealthCare</div>
       </div>
       {/* Redirect To Doctor register */}
       <p className="mt-1 px-6" style={{ color: "white" }}>

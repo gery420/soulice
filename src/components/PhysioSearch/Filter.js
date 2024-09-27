@@ -64,11 +64,11 @@ const Filter = ({ method }) => {
           value={filter.specialization}
         >
           {/* <option value="None">None</option> */}
-          <option value="Orthopedic">Orthopedic</option>
-          <option value="Pediatric">Pediatric</option>
-          <option value="Sports">Sports</option>
-          <option value="Women">Women</option>
-          <option value="Vestibular">Vestibular</option>
+          <option value="Forensic Psychiatry">Forensic Psychiatry</option>
+          <option value="Child and adolescent psychiatry">Child and adolescent psychiatry</option>
+          <option value="Geriatric psychiatry">Geriatric psychiatry</option>
+          <option value="Social Worker">Social Worker</option>
+          <option value="Licensed Professional Counselor">Licensed Professional Counselor</option>
         </select>
       </div>
 

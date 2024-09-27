@@ -24,7 +24,7 @@ const GymSearch = () => {
           experience: data.experience,
           locality: data.locality,
           page: 1,
-          category: "Gym Trainer",
+          category: "Psychiatrists",
         },
         withCredentials: true,
       });

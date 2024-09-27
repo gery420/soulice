@@ -60,7 +60,7 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col max-w-[1240px] px-2 py-4 mx-auto justify-between sm:flex-row text-center text-gray-500">
-        <p className="py-4">2023 FitHub, All rights reserved</p>
+        <p className="py-4">2023 Soulice, All rights reserved</p>
       </div>
     </div>
   );

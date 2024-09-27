@@ -37,27 +37,27 @@ const Step2 = forwardRef((props, ref) => {
             name="category"
           >
             <option
-              value="Physiotherapist"
-              selected={userData.category === "Physiotherapist" ? true : false}
+              value="Psychiatrists"
+              selected={userData.category === "Psychiatrists" ? true : false}
             >
-              Physiotherapist
+              Psychiatrists
             </option>
             <option
-              value="Nutritionist"
-              selected={userData.category === "Nutritionist" ? true : false}
+              value="Mental Health Professionals"
+              selected={userData.category === "Mental Health Professionals" ? true : false}
             >
-              Nutritionist
+              Mental Health Professionals
             </option>
             <option
-              value="Gym Trainer"
-              selected={userData.category === "Gym Trainer" ? true : false}
+              value="Pyschologists"
+              selected={userData.category === "Pyschologists" ? true : false}
             >
-              Gym Trainer
+              Pyschologists
             </option>
           </select>
         </div>
       </div>
-      {userData.category === "Physiotherapist" && (
+      {userData.category === "Mental Health Professionals" && (
         <div className="mt-5 w-full flex-1">
           <label className="h-6 text-xs font-bold uppercase leading-8 text-gray-500">
             Specialization
@@ -70,40 +70,40 @@ const Step2 = forwardRef((props, ref) => {
             >
               <option>Select Specialization</option>
               <option
-                value="Orthopedic"
+                value="Forensic Psychiatry"
                 selected={
-                  userData.specialization === "Orthopedic" ? true : false
+                  userData.specialization === "Forensic Psychiatry" ? true : false
                 }
               >
-                Orthopedic
+                Forensic Psychiatry
               </option>
               <option
-                value="Pediatric"
+                value="Child and adolescent psychiatry"
                 selected={
-                  userData.specialization === "Pediatric" ? true : false
+                  userData.specialization === "Child and adolescent psychiatry" ? true : false
                 }
               >
-                Pediatric
+                Child and adolescent psychiatry
               </option>
               <option
-                value="Sports"
-                selected={userData.specialization === "Sports" ? true : false}
+                value="Geriatric psychiatry"
+                selected={userData.specialization === "Geriatric psychiatry" ? true : false}
               >
-                Sports
+                Geriatric psychiatry
               </option>
               <option
-                value="Women"
-                selected={userData.specialization === "Women" ? true : false}
+                value="Social Worker"
+                selected={userData.specialization === "Social Worker" ? true : false}
               >
-                Women
+                Social Worker
               </option>
               <option
-                value="Vestibular"
+                value="Licensed Professional Counselor"
                 selected={
-                  userData.specialization === "Vestibular" ? true : false
+                  userData.specialization === "Licensed Professional Counselor" ? true : false
                 }
               >
-                Vestibular
+                Licensed Professional Counselor
               </option>
             </select>
           </div>
