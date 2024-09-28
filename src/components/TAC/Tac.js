@@ -30,7 +30,7 @@ const Tac = () => {
                 through the Website, and agree to and abide by this Agreement.
               </li>
               <li>
-                Soulice may by its Services, collect information relating to the
+                FitHub may by its Services, collect information relating to the
                 devices through which you access the Website, and anonymous data
                 of your usage. The collected information will be used only for
                 improving the quality of FitHub's services and to build new
@@ -44,21 +44,21 @@ const Tac = () => {
                 practice.
               </li>
               <li>
-                Soulice shall not be responsible in any manner for the
+                FitHub shall not be responsible in any manner for the
                 authenticity of the personal information or sensitive personal
-                data or information supplied by the User to Soulice or to any
+                data or information supplied by the User to FitHub or to any
                 other person acting on behalf of Practo.
               </li>
               <li>
                 If a User provides any information that is untrue, inaccurate,
                 not current or incomplete (or becomes untrue, inaccurate, not
-                current or incomplete), or Soulice has reasonable grounds to
+                current or incomplete), or FitHub has reasonable grounds to
                 suspect that such information is untrue, inaccurate, not current
-                or incomplete, Soulice has the right to discontinue the Services
+                or incomplete, FitHub has the right to discontinue the Services
                 to the User at its sole discretion.
               </li>
               <li>
-                Soulice will ensure Users are provided confirmed appointment on
+                FitHub will ensure Users are provided confirmed appointment on
                 the Book facility. However, Practo has no liability if such an
                 appointment is later cancelled by the Practitioner, or the same
                 Practitioner is not available for appointment.
@@ -111,27 +111,27 @@ const Tac = () => {
           <div className="text-xl font-medium">
             <ul className="list-disc px-20 text-white">
               <li>
-                Every Expert on the Soulice Platform must be qualified in the
+                Every Expert on the FitHub Platform must be qualified in the
                 area of expertise that he/she represents as being his
                 qualification.
               </li>
               <li>
-                Soulice, directly and indirectly, collects information regarding
-                the Experts' profiles, contact details, and practice. Soulice
+                FitHub, directly and indirectly, collects information regarding
+                the Experts' profiles, contact details, and practice. FitHub
                 reserves the right to take down any Expert's profile as well as
                 the right to display the profile of the Experts, with or without
                 notice to the concerned Expert. This information is collected
                 for the purpose of facilitating interaction with the End-Users
                 and other Users. If any information displayed on the Website in
                 connection with you and your profile is found to be incorrect,
-                you are required to inform Soulice immediately to enable Soulice
+                you are required to inform FitHub immediately to enable FitHub
                 to make the necessary amendments.
               </li>
               <li>
                 You as an Expert hereby represent and warrant that you will use
                 the Services in accordance with applicable law. Any
                 contravention of applicable law as a result of your use of these
-                Services is your sole responsibility, and Soulice accepts no
+                Services is your sole responsibility, and FitHub accepts no
                 liability for the same.
               </li>
               <li className="mb-10">

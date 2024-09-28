@@ -66,7 +66,7 @@ const Navbar = () => {
       <div className="px-2 flex flex-col justify-between h-screen py-5">
         {/* Logo */}
         <div className="text-4xl font-black text-white text-center font-head-primary">
-          <Link to="/home">Soulice</Link>
+          <Link to="/home">FitHub</Link>
         </div>
 
         {/* Routes */}

@@ -4,6 +4,7 @@ const app = express();
 const helmet = require("helmet");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+require("dotenv").config();
 
 //middlewares
 app.use(cookieParser());

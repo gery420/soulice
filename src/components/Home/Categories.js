@@ -45,7 +45,7 @@ const Categories = () => {
           </div>
 
           {/* Text */}
-          <div className="font-bold text-lg text-center">Pyschologists</div>
+          <div className="font-bold text-lg text-center">Gym Trainers</div>
         </div>
 
         {/* Nutritionist */}
@@ -58,7 +58,7 @@ const Categories = () => {
           </div>
 
           {/* Text */}
-          <div className="font-bold text-lg text-center">Mental health professionals</div>
+          <div className="font-bold text-lg text-center">Nutritionists</div>
         </div>
 
         {/* Physio */}
@@ -71,7 +71,7 @@ const Categories = () => {
           </div>
 
           {/* Text */}
-          <div className="font-bold text-lg text-center">Psychiatrists</div>
+          <div className="font-bold text-lg text-center">Physiotherapists</div>
         </div>
       </div>
     </div>

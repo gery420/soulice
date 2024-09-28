@@ -39,6 +39,7 @@ import ExpertVerify from "components/AdminDashboard/ExpertVerify";
 import UserQuery from "components/AdminDashboard/GetQuery";
 import Tac from "components/TAC/Tac";
 
+import VideoCall from "pages/VideoCall";
 import Rating from "pages/Rating";
 import ProtectedRoute from "components/ProtectRoute/ProtectRoute";
 // import Notverified from "components/DocNotverified/Notverified";
@@ -146,6 +147,7 @@ function App() {
             <Route exact path="/tac" element={<Tac />} />
 
             {/* video call  */}
+            <Route exact path="/video/:roomId" element={<VideoCall />} />
 
             {/* rating  */}
             <Route exact path="/ratetheroom/:roomId" element={<Rating />} />

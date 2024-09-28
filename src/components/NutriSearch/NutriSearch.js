@@ -25,7 +25,7 @@ const NutriSearch = () => {
           experience: data.experience,
           locality: data.locality,
           page: 1,
-          category: "Pyschologists",
+          category: "Nutritionist",
         },
         withCredentials: true,
       });

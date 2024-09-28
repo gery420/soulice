@@ -21,7 +21,7 @@ const PhysioSearch = () => {
         newObj[key] = data[key];
       }
     }
-    newObj["category"] = "Mental Health Professionals";
+    newObj["category"] = "Physiotherapist";
 
     try {
       setLoad(true);
