@@ -5,7 +5,7 @@ const { RegisterJoi, BookAppointmentJoi } = require("../joi/PatientJoi");
 const SendEmail = require("../utils/Email");
 const bcrypt = require("bcrypt");
 const TokenGenerator = require("../Utils/TokenGenerator");
-const { ClientError } = require("../Utils/Errors");
+const { ClientError } = require("../utils/Errors");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
@@ -228,7 +228,7 @@ exports.getCheckoutSession = async (req, res, next) => {
     // Create checkout session
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
-      // payment_method_types:['card'],
+      //payment_method_type:['card'],
 
       // Add a success page
       // HOME PAGE
@@ -279,8 +279,8 @@ exports.paymentStatus = async () => {
 //fetching highest rated doctors
 exports.getHighestRatedDoctors = async (req, res, next) => {
   try {
-    let physio = await Doctor.find({
-      category: "Physiotherapist",
+    let pysch = await Doctor.find({
+      category: "Pyschiatrists",
       adminVerified: true,
     })
       .select(
@@ -288,8 +288,8 @@ exports.getHighestRatedDoctors = async (req, res, next) => {
       )
       .sort({ rating: -1 })
       .limit(3);
-    let nutri = await Doctor.find({
-      category: "Nutritionist",
+    let prof = await Doctor.find({
+      category: "Professionals",
       adminVerified: true,
     })
       .select(
@@ -297,8 +297,8 @@ exports.getHighestRatedDoctors = async (req, res, next) => {
       )
       .sort({ rating: -1 })
       .limit(3);
-    let gym = await Doctor.find({
-      category: "Gym Trainer",
+    let pyscho = await Doctor.find({
+      category: "Pyschologists",
       adminVerified: true,
     })
       .select(
@@ -310,9 +310,9 @@ exports.getHighestRatedDoctors = async (req, res, next) => {
     res.status(200).json({
       // name, avgRating, Location map link, fees, exp, profile pic, specialization
       data: {
-        physio,
-        nutri,
-        gym,
+        pysch,
+        prof,
+        pyscho,
       },
       success: true,
     });

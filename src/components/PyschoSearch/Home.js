@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "components/Utils/Navbar";
-import NutriSearch from "components/NutriSearch/NutriSearch";
+import PyschoSearch from "components/PyschoSearch/PyschoSearch";
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
 
       {/*  */}
       <div className="w-[84%] ">
-        <NutriSearch />
+        <PyschoSearch />
       </div>
     </div>
   );

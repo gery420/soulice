@@ -2,7 +2,7 @@
 const joi = require('joi');
 joi.objectId = require('joi-objectid')(joi);
 
-const {ClientError} = require("../Utils/Errors");
+const {ClientError} = require("../utils/Errors");
 
 //using joi for validating the user entered fields
 exports.RegisterJoi = async (body)=>{

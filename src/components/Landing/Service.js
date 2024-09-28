@@ -25,7 +25,7 @@ const Service = () => {
             Find the right expert for you!
           </h3>
           <p className="py-4 text-3xl text-slate-300 text-center">
-            Look out for physiotherpists, nutritionists and gym trainers{" "}
+            Look out for pyschiatrists, mental health professionals and pyschologists{" "}
             <br></br>
             all under one roof! Book an appointment with an expert, <br></br>
             have multiple sessions and see the magic unfold!
@@ -43,11 +43,11 @@ const Service = () => {
                 <BoldPhysioIcon size="35" color="#ffffff" />
               </div>
 
-              <h3 className="font-bold text-2xl my-6">Physiotherapists</h3>
+              <h3 className="font-bold text-2xl my-6">Pyschiatrists</h3>
               <p className="text-gray-600 text-xl">
-                Having a back pain, joint pain or knee pain? Well, specialized
-                physiotherapists are here to heal! Find the right
-                physiotherapist, get treated and monitored routinely and get
+                Suffering from distress, PTSD, anxiety? Well, specialized
+                pyschiatrists are here to heal! Find the right
+                pyschiatrists, get treated and monitored routinely and get
                 yourself up and running!
               </p>
             </div>
@@ -62,10 +62,10 @@ const Service = () => {
               >
                 <BoldNutritionistIcon size="35" color="#ffffff" />
               </div>
-              <h3 className="font-bold text-2xl my-6">Nutritionists</h3>
+              <h3 className="font-bold text-2xl my-6">Mental Health Professionals</h3>
               <p className="text-gray-600 text-xl">
-                Having difficulty losing weight? Well, nutritionists are here to
-                help! Find the right nutritionist, get treated and monitored
+                Having difficulty connecting socially? Well, experts are here to
+                help! Find the right professional, get treated and monitored
                 routinely and be back in shape!
               </p>
             </div>
@@ -80,11 +80,11 @@ const Service = () => {
               >
                 <BoldGymIcon size="35" color="#ffffff" />
               </div>
-              <h3 className="font-bold text-2xl my-6">Gym Trainers</h3>
+              <h3 className="font-bold text-2xl my-6">Pyschologists</h3>
               <p className="text-gray-600 text-xl">
-                Want to maintain overall fitness? Well, gym trainers are here
+                Want to maintain mental fitness? Well, pyschologists are here
                 for that! Find the right instrcutor,enroll in their batch,
-                attend yoga sessions regularly and stay fit,mentally and
+                attend their sessions regularly and stay fit,mentally and
                 physically!
               </p>
             </div>

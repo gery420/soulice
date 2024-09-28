@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import Heading from "components/NutriSearch/Heading";
-import Filter from "components/NutriSearch/Filter";
-import DoctorResult from "components/NutriSearch/Result";
-import Pagination from "components/PhysioSearch/Pagination";
-import Swal from "sweetalert2";
+import Heading from "components/ProfSearch/Heading";
+import Filter from "components/ProfSearch/Filter";
+import DoctorResult from "components/ProfSearch/Result";
 import axios from "axios";
+import Swal from "sweetalert2";
 
-const NutriSearch = () => {
+const ProfSearch = () => {
   const [load, setLoad] = useState(false);
   const [data, setData] = useState({
     doctors: [],
@@ -16,20 +15,21 @@ const NutriSearch = () => {
 
   const filterDocs = async (data) => {
     console.log("data : ", data);
+    let newObj = {};
+    for (let key in data) {
+      if (data[key] !== "None") {
+        newObj[key] = data[key];
+      }
+    }
+    newObj["category"] = "Professionals";
+
     try {
       setLoad(true);
       let res = await axios.get("http://localhost:3001/doctor", {
-        params: {
-          ratings: data.ratings,
-          fee: data.fee,
-          experience: data.experience,
-          locality: data.locality,
-          page: 1,
-          category: "Nutritionist",
-        },
+        params: newObj,
         withCredentials: true,
       });
-      console.log("resp in filters is ", res.data.data);
+      console.log("resp", res.data.data);
       setData(res.data.data);
       setLoad(false);
     } catch (err) {
@@ -46,7 +46,7 @@ const NutriSearch = () => {
   return (
     <>
       {/* Main Container */}
-      <div className="bg-gradient-to-r from-dark-100 via-dark-200 to-dark-100 text-white py-6 flex flex-col space-y-6 h-full">
+      <div className="bg-gradient-to-r from-dark-100 via-dark-200 to-dark-100 min-h-screen text-white py-6 flex flex-col space-y-6">
         <div className="top-0 w-[100%] mx-auto">
           {/* Title */}
           <Heading />
@@ -61,13 +61,13 @@ const NutriSearch = () => {
           style={{ marginTop: -5 }}
         >
           {load ? (
-            <div className="mx-auto my-10 text-3xl font-bold">Loading....</div>
+            <div className="mx-auto my-10 text-3xl font-bold"> Loading....</div>
           ) : data.doctors.length === 0 ? (
             <div className="mx-auto my-10 text-3xl font-bold">
               Sorry, no results found!
             </div>
           ) : (
-            <div className="grid grid-cols-3 grid-flow-col gap-4 my-10">
+            <div className="grid grid-cols-3 grid-flow-col gap-4">
               {data.doctors.map((element, i) => (
                 <DoctorResult element={element} key={i} />
               ))}
@@ -79,4 +79,4 @@ const NutriSearch = () => {
   );
 };
 
-export default NutriSearch;
+export default ProfSearch;

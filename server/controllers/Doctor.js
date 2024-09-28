@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const TokenGenerator = require("../Utils/TokenGenerator");
 const { cloudinary } = require("../Utils/cloudinary");
 const Review = require("../models/review");
-const { ClientError } = require("../Utils/Errors");
+const { ClientError } = require("../utils/Errors");
 //registering the doctor
 exports.Register = async (req, res, next) => {
   try {
@@ -102,7 +102,7 @@ exports.getDoctors = async (req, res, next) => {
     };
     query["category"] = req.query.category;
     query["locality"] = req.query.locality;
-    if (req.query.category === "Physiotherapist") {
+    if (req.query.category === "Professionals") {
       query["specialization"] = req.query.specialization;
     }
     let sortVar =

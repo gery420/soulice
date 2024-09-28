@@ -15,9 +15,9 @@ const Hero = () => {
           </p>
           <h1 className="flex flex-col space-y-0">
             <div className=" text-5xl md:text-7xl font-bold text-white">
-              FitHub
+              Soulice
             </div>
-            <p className="text-lg text-dark-600 ml-2">Must for HealthCare</p>
+            <p className="text-lg text-dark-600 ml-2">Must for Mental Health</p>
           </h1>
           <button className="py-3 px-6 sm:w-[60%] my-8 rounded-md bg-primary-blue hover:bg-secondary-blue text-white">
             <a href="/signup">Get Started</a>

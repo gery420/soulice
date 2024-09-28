@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="flex items-center">
           {/* Logo */}
           <h1 className="text-4xl font-black mr-4 sm:text-4xl text-primary-blue font-head-primary">
-            FitHub
+            Soulice
           </h1>
 
           {/* Routes */}

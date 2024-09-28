@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import BoldFullStarIcon from "components/Icons/Bold/fullStar";
 import BoldHalfStarIcon from "components/Icons/Bold/halfStar";
 import BoldThumbsupIcon from "components/Icons/Bold/thumbsUp";
 import BoldLocationIcon from "components/Icons/Bold/location";
 import { Link } from "react-router-dom";
 
-const TopGym = ({ info }) => {
+const TopPysch = ({ info }) => {
   const {
     name,
     rating,
@@ -15,13 +15,14 @@ const TopGym = ({ info }) => {
     years_Of_Experience,
     clinic_name,
     category,
+    specialization,
     locality,
     _id,
   } = info;
 
   return (
     <>
-      <div className="flex flex-col bg-primary-blue p-5 rounded-lg space-y-4 mt-12 text-dark-100 mx-4">
+      <div className="flex flex-col bg-primary-blue p-5 rounded-lg space-y-4 text-dark-100 mx-4">
         <div className="flex justify-center space-x-6">
           {/* img */}
           <div>
@@ -81,8 +82,10 @@ const TopGym = ({ info }) => {
           {/* Name */}
           <div className="font-black text-2xl">{name}</div>
 
-          {/* Category */}
-          <div className="text-lg font-semibold text-dark-900">{category}</div>
+          {/* Speciality */}
+          <div className="text-lg font-semibold text-dark-900">
+            {specialization} {category}
+          </div>
 
           {/* Experience */}
           <div className="text-lg text-dark-900">
@@ -108,7 +111,7 @@ const TopGym = ({ info }) => {
         </div>
 
         {/* book appointment*/}
-        <button className="bg-dark-100 hover:bg-dark-200 text-white text-lg font-bold rounded-lg py-2 ">
+        <button className="bg-dark-100 hover:bg-dark-200 text-white text-lg font-bold rounded-lg py-2">
           <Link to={`/doctorProfile/${_id}`}>View More</Link>
         </button>
       </div>
@@ -116,4 +119,4 @@ const TopGym = ({ info }) => {
   );
 };
 
-export default TopGym;
+export default TopPysch;

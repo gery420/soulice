@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Heading from "components/TopRated/Heading";
 import Navbar from "components/Utils/Navbar";
-import TopPhysio from "components/TopRated/TopPhysio";
-import TopNutri from "components/TopRated/TopNutri";
-import TopGym from "components/TopRated/TopGym";
+import TopPysch from "components/TopRated/TopPysch";
+import TopProfes from "components/TopRated/TopProfes";
+import TopPyscho from "components/TopRated/TopPyscho";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -60,7 +60,7 @@ const TopRated = () => {
             className="w-[25%] mx-auto border border-solid border-blueGray-100 py-3 pl-10 border-l-0 border-r-0"
             style={{ marginTop: 40, fontSize: 22 }}
           >
-            Top Rated Physiotherapists
+            Top Rated Pyschiatrists
           </div>
 
           {/* Top Rated Physios */}
@@ -71,22 +71,22 @@ const TopRated = () => {
               docs["physio"].map((item, i) => {
                 return (
                   <div key={i}>
-                    <TopPhysio info={item} />
+                    <TopPysch info={item} />
                   </div>
                 );
               })
             ) : (
-              <p>No physiotherapists available right now!</p>
+              <p>No pyschiatrists available right now!</p>
             )}
           </div>
           <div
             className="w-[25%] mx-auto border border-solid border-blueGray-100 py-3 pl-16 border-l-0 border-r-0"
             style={{ marginTop: 75, fontSize: 22 }}
           >
-            Top Rated Nutritionists
+            Top Rated Professionals
           </div>
 
-          {/* Top rated Nutritionists */}
+          {/* Top rated Professionals */}
           <div
             className="w-[85%] mx-auto h-full flex items-center justify-start overflow-x-auto gap-6 relative"
             style={{ marginTop: -22 }}
@@ -97,12 +97,12 @@ const TopRated = () => {
               docs["nutri"].map((item, i) => {
                 return (
                   <div key={i}>
-                    <TopNutri info={item} />
+                    <TopProfes info={item} />
                   </div>
                 );
               })
             ) : (
-              <p>No nutritionists available right now!</p>
+              <p>No Professionals available right now!</p>
             )}
           </div>
 
@@ -110,10 +110,10 @@ const TopRated = () => {
             className="w-[25%] mx-auto border border-solid border-blueGray-100 py-3 pl-16 border-l-0 border-r-0"
             style={{ marginTop: 75, fontSize: 22 }}
           >
-            Top Rated Gym Trainers
+            Top Rated Pyschologists
           </div>
 
-          {/* Top rated Gym Trainers */}
+          {/* Top rated Pyschologists */}
           <div
             className="w-[85%] mx-auto h-full flex items-center justify-start overflow-x-auto gap-6 relative"
             style={{ marginTop: -22 }}
@@ -124,12 +124,12 @@ const TopRated = () => {
               docs["gym"].map((item, i) => {
                 return (
                   <div key={i}>
-                    <TopGym info={item} />
+                    <TopPyscho info={item} />
                   </div>
                 );
               })
             ) : (
-              <p>No gym trainers available right now!</p>
+              <p>No Pyschologists available right now!</p>
             )}
           </div>
 

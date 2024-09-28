@@ -87,13 +87,13 @@ exports.verifyDoctor = async (req, res, next) => {
 // router to display all the statistics
 exports.statistics = async (req, res, next) => {
   try {
-    const physio = await Doctor.find({
-      category: "Physiotherapist",
+    const pysch = await Doctor.find({
+      category: "Pyschiatrists",
     }).countDocuments();
-    const nutri = await Doctor.find({
-      category: "Nutritionist",
+    const prof = await Doctor.find({
+      category: "Professionals",
     }).countDocuments();
-    const gym = await Doctor.find({ category: "Gym Trainer" }).countDocuments();
+    const pyscho = await Doctor.find({ category: "Pyschologists" }).countDocuments();
     const patients = await Patient.countDocuments();
     const appointments = await Schedule.countDocuments();
     const avgSessions = appointments / patients;
@@ -101,9 +101,9 @@ exports.statistics = async (req, res, next) => {
     return res.status(200).json({
       success: true,
       data: {
-        physio,
-        nutri,
-        gym,
+        pysch,
+        prof,
+        pyscho,
         patients,
         appointments,
         avgSessions,

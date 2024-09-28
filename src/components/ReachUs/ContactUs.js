@@ -95,19 +95,19 @@ const ContactUs = () => {
 
                 <details className="w-full border rounded-lg mt-5" open="">
                   <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">
-                    How does FitHub offer one-to-one monitoring?
+                    How does Soulice offer one-to-one monitoring?
                   </summary>
                   <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
                     Features such as end to end encrypted chat, video
                     consultation, routine progress reports facilitate one-to-one
                     monitoring between patient/user and doctor/expert here at
-                    FitHub.
+                    Soulice.
                   </p>
                 </details>
 
                 <details className="w-full border rounded-lg mt-5" open="">
                   <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">
-                    How many doctors/Experts are a part of the FitHub network?
+                    How many doctors/Experts are a part of the Soulice network?
                   </summary>
                   <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
                     Around 4000+ doctors/experts are a part of the Practo
@@ -118,7 +118,7 @@ const ContactUs = () => {
 
                 <details className="w-full border rounded-lg mt-5" open="">
                   <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">
-                    What measures does FitHub have in place for the protection
+                    What measures does Soulice have in place for the protection
                     of user data security and privacy?
                   </summary>
                   <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">

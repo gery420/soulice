@@ -7,7 +7,7 @@ const SendEmail = (options, next) => {
   return new Promise((resolve, reject) => {
     console.log(process.env.MAIL_USERNAME);
     const transporter = nodemailer.createTransport({
-      service: "Outlook365",
+      service: "Gmail",
       host: process.env.MAIL_HOST,
       // port: process.env.MAIL_PORT,
       port: 587,

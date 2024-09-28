@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Heading from "components/GymSearch/Heading";
-import Filter from "components/GymSearch/Filter";
-import DoctorResult from "components/GymSearch/Result";
-import Pagination from "components/PhysioSearch/Pagination";
+import Heading from "components/PyschoSearch/Heading";
+import Filter from "components/PyschoSearch/Filter";
+import DoctorResult from "components/PyschoSearch/Result";
+import Pagination from "components/ProfSearch/Pagination";
 import axios from "axios";
 import Swal from "sweetalert2";
-const GymSearch = () => {
+const PyschoSearch = () => {
   const [load, setLoad] = useState(false);
   const [data, setData] = useState({
     doctors: [],
@@ -24,7 +24,7 @@ const GymSearch = () => {
           experience: data.experience,
           locality: data.locality,
           page: 1,
-          category: "Gym Trainer",
+          category: "Pyschologists",
         },
         withCredentials: true,
       });
@@ -77,4 +77,4 @@ const GymSearch = () => {
   );
 };
 
-export default GymSearch;
+export default PyschoSearch;

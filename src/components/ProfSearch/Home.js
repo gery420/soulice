@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "components/Utils/Navbar";
-import PhysioSearch from "components/PhysioSearch/PhysioSearch";
+import ProfSearch from "components/ProfSearch/ProfSearch";
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
 
       {/*  */}
       <div className="w-[84%] ">
-        <PhysioSearch />
+        <ProfSearch />
       </div>
     </div>
   );

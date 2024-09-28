@@ -28,9 +28,9 @@ import Success from "components/PaymentSuccess/Success";
 import ChatHome from "components/Chat/ChatHome";
 
 // import ContactsProvider from "context/ContactsContext";
-import PhysioSearch from "components/PhysioSearch/Home";
-import NutriSearch from "components/NutriSearch/Home";
-import GymSearch from "components/GymSearch/Home";
+import ProfSearch from "components/ProfSearch/Home";
+import PyschSearch from "components/PyschSearch/Home";
+import PyschoSearch from "components/PyschoSearch/Home";
 import TopRated from "components/TopRated/TopRated";
 
 import UserProvider from "context/UserContext";
@@ -39,7 +39,6 @@ import ExpertVerify from "components/AdminDashboard/ExpertVerify";
 import UserQuery from "components/AdminDashboard/GetQuery";
 import Tac from "components/TAC/Tac";
 
-import VideoCall from "pages/VideoCall";
 import Rating from "pages/Rating";
 import ProtectedRoute from "components/ProtectRoute/ProtectRoute";
 // import Notverified from "components/DocNotverified/Notverified";
@@ -114,19 +113,19 @@ function App() {
             {/* Physio Search */}
             <Route
               exact
-              path="/searchPhysiotherapists"
-              element={<PhysioSearch />}
+              path="/searchPyschiatrists"
+              element={<PyschSearch />}
             />
 
             {/* Nutritonist Search */}
             <Route
               exact
-              path="/searchNutritionists"
-              element={<NutriSearch />}
+              path="/searchProfessionals"
+              element={<ProfSearch />}
             />
 
             {/* Gym Trainer Search */}
-            <Route exact path="/searchGymtrainers" element={<GymSearch />} />
+            <Route exact path="/searchPyschologists" element={<PyschoSearch />} />
 
             {/* Contact Us and faq page */}
             <Route exact path="/contactUs" element={<ContactUs />} />
@@ -145,9 +144,6 @@ function App() {
 
             {/* Terms and Condition Page */}
             <Route exact path="/tac" element={<Tac />} />
-
-            {/* video call  */}
-            <Route exact path="/video/:roomId" element={<VideoCall />} />
 
             {/* rating  */}
             <Route exact path="/ratetheroom/:roomId" element={<Rating />} />

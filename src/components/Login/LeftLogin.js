@@ -6,10 +6,10 @@ const LeftLogin = () => {
       {/* heading */}
       <div className="flex-col space-y-0 text-center">
         <div className="font-black text-6xl font-head-primary text-dark-100">
-          FitHub
+          Soulice
         </div>
         <div className="text-lg" style={{ marginTop: 20 }}>
-          Must for HealthCare
+          Must for Mental Health
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const { AuthenticationError } = require("../Utils/Errors");
+const { AuthenticationError } = require("../utils/Errors");
 const { promisify } = require("util");
 const Patient = require("../models/Patient");
 const Doctor = require("../models/Doctor");

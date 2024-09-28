@@ -10,15 +10,15 @@ const Categories = () => {
   const navigate = useNavigate();
 
   const clickHandler1 = () => {
-    navigate("/searchPhysiotherapists");
+    navigate("/searchPyschiatrists");
   };
 
   const clickHandler2 = () => {
-    navigate("/searchNutritionists");
+    navigate("/searchProfessionals");
   };
 
   const clickHandler3 = () => {
-    navigate("/searchGymtrainers");
+    navigate("/searchPyschologists");
   };
 
   return (
@@ -45,7 +45,7 @@ const Categories = () => {
           </div>
 
           {/* Text */}
-          <div className="font-bold text-lg text-center">Gym Trainers</div>
+          <div className="font-bold text-lg text-center">Pyschologists</div>
         </div>
 
         {/* Nutritionist */}
@@ -58,7 +58,7 @@ const Categories = () => {
           </div>
 
           {/* Text */}
-          <div className="font-bold text-lg text-center">Nutritionists</div>
+          <div className="font-bold text-lg text-center">Mental Health Professionals</div>
         </div>
 
         {/* Physio */}
@@ -71,7 +71,7 @@ const Categories = () => {
           </div>
 
           {/* Text */}
-          <div className="font-bold text-lg text-center">Physiotherapists</div>
+          <div className="font-bold text-lg text-center">Pyschiatrists</div>
         </div>
       </div>
     </div>

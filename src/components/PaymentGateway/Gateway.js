@@ -1,81 +1,80 @@
-import React from "react";
+import React, {useState, useNavigate} from "react";
+import axios from "axios";
+import Swal from "sweetalert2";
 import Navbar from "components/Utils/Navbar";
 import Heading from "components/PaymentGateway/Heading";
 import BoldLicenceIcon from "components/Icons/Bold/licence";
 import BoldLockIcon from "components/Icons/Bold/lock";
 
 const Gateway = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // let [data, setData] = useState({
-  //   name: "",
-  //   cardNumber: "",
-  //   email: "",
-  //   securityCode: "",
-  //   expiryDate: "",
-  //   checked: false,
-  // });
-
-  // const [load, setLoad] = useState(false);
-
-  // const submit = async (event) => {
-  //   try {
-  //     if (!data.checked) {
-  //       Swal.fire({
-  //         icon: "error",
-  //         title: "Oops...",
-  //         text: "Please check the checkbox..",
-  //       });
-  //       return;
-  //     }
-  // event.preventDefault();
-  // let postData = {
-  //   name: data.name,
-  //   cardNumber: data.cardNumber,
-  //   email: data.email,
-  //   securityCode: data.securityCode,
-  //   expiryDate: data.expiryDate,
-  // };
-  // setLoad(true);
-  // let res = await axios.post(
-  //   "http://127.0.0.1:3001/patient/payment",
-  //   postData
-  // );
-  // console.log("RESULT : ", res);
-  // setLoad(false);
-  // setData({
-  //   name: "",
-  //   cardNumber: "",
-  //   email: "",
-  //   securityCode: "",
-  //   expiryDate: "",
-  // });
-  // if (res.data.success === true) {
-  //   Swal.fire({
-  //     icon: "success",
-  //     title: res.data.message,
-  //   });
-  // }
-  //   } catch (err) {
-  //     setLoad(false);
-  //     console.log("err : ", err);
-  //     Swal.fire({
-  //       icon: "error",
-  //       title: "Oops...",
-  //       text: err.response.data.error
-  //         ? err.response.data.error
-  //         : "Something went wrong!",
-  //     });
-  //   }
-  // };
-
-  // const updateInfo = (event) => {
-  //   const { name, value } = event.target;
-  //   //setting the data
-  //   setData((prevData) => {
-  //     return { ...prevData, [name]: value };
-  //   });
-  // };
+  let [data, setData] = useState({
+    name: "",
+    cardNumber: "",
+    email: "",
+    securityCode: "",
+    expiryDate: "",
+    checked: false,
+  });
+  const [load, setLoad] = useState(false);
+  const submit = async (event) => {
+    try {
+      if (!data.checked) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Please check the checkbox..",
+        });
+        return;
+      }
+  event.preventDefault();
+  let postData = {
+    name: data.name,
+    cardNumber: data.cardNumber,
+    email: data.email,
+    securityCode: data.securityCode,
+    expiryDate: data.expiryDate,
+  };
+  setLoad(true);
+  let res = await axios.post(
+    "http://127.0.0.1:3001/patient/payment",
+    postData
+  );
+  console.log("RESULT : ", res);
+  setLoad(false);
+  setData({
+    name: "",
+    cardNumber: "",
+    email: "",
+    securityCode: "",
+    expiryDate: "",
+  });
+  if (res.data.success === true) {
+    Swal.fire({
+      icon: "success",
+      title: res.data.message,
+    });
+  }
+    } catch (err) {
+      setLoad(false);
+      console.log("err : ", err);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: err.response.data.error
+          ? err.response.data.error
+          : "Something went wrong!",
+      });
+    }
+  };
+  const updateInfo = (event) => {
+    const { name, value } = event.target;
+    //setting the data
+    setData((prevData) => {
+      return { ...prevData, [name]: value };
+    });
+  };
 
   return (
     <div className="w-full flex flex-row font-body-primary">
@@ -130,7 +129,7 @@ const Gateway = () => {
                   className="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
                   placeholder="Name on Card"
                   type="text"
-                  // onChange={updateInfo}
+                  onChange={updateInfo}
                 />
               </div>
             </div>
@@ -145,7 +144,7 @@ const Gateway = () => {
                   className="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
                   placeholder="0000 0000 0000 0000"
                   type="number"
-                  // onChange={updateInfo}
+                  onChange={updateInfo}
                 />
               </div>
             </div>
@@ -160,7 +159,7 @@ const Gateway = () => {
                     name="expiryDate"
                     type="month"
                     placeholder="MM/YY"
-                    // onChange={updateInfo}
+                    onChange={updateInfo}
                     className="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
                   />
                 </div>
@@ -175,7 +174,7 @@ const Gateway = () => {
                     placeholder="***"
                     name="securityCode"
                     type="password"
-                    // onChange={updateInfo}
+                    onChange={updateInfo}
                   />
                 </div>
               </div>
@@ -192,15 +191,15 @@ const Gateway = () => {
                   className="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
                   placeholder="Your email"
                   type="email"
-                  // onChange={updateInfo}
+                  onChange={updateInfo}
                 />
               </div>
             </div>
             <div>
               <button
                 className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
-                // disabled={load ? true : false}
-                // onClick={submit}
+                disabled={load ? true : false}
+                onClick={submit}
               >
                 <a href="/paymentSuccess">
                   <BoldLockIcon /> PAY NOW

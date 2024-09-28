@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Heading from "components/PhysioSearch/Heading";
-import Filter from "components/PhysioSearch/Filter";
-import DoctorResult from "components/PhysioSearch/Result";
-import axios from "axios";
+import Heading from "components/PyschSearch/Heading";
+import Filter from "components/PyschSearch/Filter";
+import DoctorResult from "components/PyschSearch/Result";
 import Swal from "sweetalert2";
+import axios from "axios";
 
-const PhysioSearch = () => {
+const PyschSearch = () => {
   const [load, setLoad] = useState(false);
   const [data, setData] = useState({
     doctors: [],
@@ -15,21 +15,20 @@ const PhysioSearch = () => {
 
   const filterDocs = async (data) => {
     console.log("data : ", data);
-    let newObj = {};
-    for (let key in data) {
-      if (data[key] !== "None") {
-        newObj[key] = data[key];
-      }
-    }
-    newObj["category"] = "Physiotherapist";
-
     try {
       setLoad(true);
       let res = await axios.get("http://localhost:3001/doctor", {
-        params: newObj,
+        params: {
+          ratings: data.ratings,
+          fee: data.fee,
+          experience: data.experience,
+          locality: data.locality,
+          page: 1,
+          category: "Professionals",
+        },
         withCredentials: true,
       });
-      console.log("resp", res.data.data);
+      console.log("resp in filters is ", res.data.data);
       setData(res.data.data);
       setLoad(false);
     } catch (err) {
@@ -46,7 +45,7 @@ const PhysioSearch = () => {
   return (
     <>
       {/* Main Container */}
-      <div className="bg-gradient-to-r from-dark-100 via-dark-200 to-dark-100 min-h-screen text-white py-6 flex flex-col space-y-6">
+      <div className="bg-gradient-to-r from-dark-100 via-dark-200 to-dark-100 text-white py-6 flex flex-col space-y-6 h-full">
         <div className="top-0 w-[100%] mx-auto">
           {/* Title */}
           <Heading />
@@ -61,13 +60,13 @@ const PhysioSearch = () => {
           style={{ marginTop: -5 }}
         >
           {load ? (
-            <div className="mx-auto my-10 text-3xl font-bold"> Loading....</div>
+            <div className="mx-auto my-10 text-3xl font-bold">Loading....</div>
           ) : data.doctors.length === 0 ? (
             <div className="mx-auto my-10 text-3xl font-bold">
               Sorry, no results found!
             </div>
           ) : (
-            <div className="grid grid-cols-3 grid-flow-col gap-4">
+            <div className="grid grid-cols-3 grid-flow-col gap-4 my-10">
               {data.doctors.map((element, i) => (
                 <DoctorResult element={element} key={i} />
               ))}
@@ -79,4 +78,4 @@ const PhysioSearch = () => {
   );
 };
 
-export default PhysioSearch;
+export default PyschSearch;

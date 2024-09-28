@@ -7,7 +7,7 @@ const {
   AuthenticationError,
   ClientError,
   AuthorizationError,
-} = require("../Utils/Errors");
+} = require("../utils/Errors");
 const SendEmail = require("../utils/Email");
 const jwt = require("jsonwebtoken");
 const { promisify } = require("util");

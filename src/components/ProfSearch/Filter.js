@@ -4,7 +4,7 @@ const Filter = ({ method }) => {
   //filters
   let [filter, setFilter] = useState({
     ratings: "-1",
-    specialization: "Orthopedic",
+    specialization: "Counsellor",
     fee: "None",
     experience: "None",
     locality: "Andheri",
@@ -64,11 +64,11 @@ const Filter = ({ method }) => {
           value={filter.specialization}
         >
           {/* <option value="None">None</option> */}
-          <option value="Orthopedic">Orthopedic</option>
-          <option value="Pediatric">Pediatric</option>
-          <option value="Sports">Sports</option>
-          <option value="Women">Women</option>
-          <option value="Vestibular">Vestibular</option>
+          <option value="Counsellor">Counsellor</option>
+          <option value="Nurse">Nurse</option>
+          <option value="Neuro">Neuro</option>
+          <option value="Care">Care</option>
+          <option value="Pyscholoanalyst">Pyscholoanalyst</option>
         </select>
       </div>
 

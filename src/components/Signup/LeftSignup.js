@@ -6,9 +6,9 @@ const LeftSignup = () => {
       {/* heading */}
       <div className="flex-col space-y-0 text-center">
         <div className="font-black text-6xl font-head-primary text-dark-100">
-          FitHub
+          Soulice
         </div>
-        <div className="text-lg">Must for HealthCare</div>
+        <div className="text-lg">Must for Mental Healthe</div>
       </div>
 
       {/* Center Tagline */}

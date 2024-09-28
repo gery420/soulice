@@ -1,6 +1,6 @@
 //joi validations
 const joi = require('joi');
-const { ClientError } = require("../Utils/Errors");
+const { ClientError } = require("../utils/Errors");
 
 //using joi for validating the user entered fields
 exports.RegisterDoctorJoi = async (body) => {

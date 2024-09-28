@@ -1,5 +1,5 @@
 const express = require("express");
-const { NotFoundError, ClientError } = require("./Utils/Errors");
+const { NotFoundError, ClientError } = require("./utils/Errors");
 const app = express();
 const helmet = require("helmet");
 const cors = require("cors");

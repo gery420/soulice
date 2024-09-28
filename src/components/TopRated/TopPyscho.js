@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import BoldFullStarIcon from "components/Icons/Bold/fullStar";
 import BoldHalfStarIcon from "components/Icons/Bold/halfStar";
 import BoldThumbsupIcon from "components/Icons/Bold/thumbsUp";
-import LightStarIcon from "components/Icons/Light/star";
 import BoldLocationIcon from "components/Icons/Bold/location";
-
 import { Link } from "react-router-dom";
 
-const TopNutri = ({ info }) => {
+const TopPyscho = ({ info }) => {
   const {
     name,
     rating,
@@ -109,9 +107,8 @@ const TopNutri = ({ info }) => {
           <div className="font-semibold mt-2">₹{fees} per session</div>
         </div>
 
-
         {/* book appointment*/}
-        <button className="bg-dark-100 hover:bg-dark-200 text-white text-lg font-bold rounded-lg py-2">
+        <button className="bg-dark-100 hover:bg-dark-200 text-white text-lg font-bold rounded-lg py-2 ">
           <Link to={`/doctorProfile/${_id}`}>View More</Link>
         </button>
       </div>
@@ -119,4 +116,4 @@ const TopNutri = ({ info }) => {
   );
 };
 
-export default TopNutri;
+export default TopPyscho;
